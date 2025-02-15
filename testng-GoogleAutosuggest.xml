@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="GoogleSearchSuite">
+  
+  <!-- Test Level -->
+  <test name="GoogleSearchTest">
+    
+    <!-- Parameter for Browser Selection -->
+    <parameter name="browser" value="firefox"/> <!-- You can change this to "firefox" to run in Firefox -->
+    
+    <!-- Classes to run -->
+    <classes>
+      <class name="TestngProjects.GoogleSearch_AutosuuggestDropdown">
+        <methods>
+          <!-- Include the specific method you want to run -->
+          <include name="testGoogleSearch"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+
+</suite>

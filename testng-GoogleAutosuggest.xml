@@ -5,7 +5,7 @@
   <test name="GoogleSearchTest">
     
     <!-- Parameter for Browser Selection -->
-    <parameter name="browser" value="firefox"/> <!-- You can change this to "firefox" to run in Firefox -->
+    <parameter name="browser" value="firefox"/> 
     
     <!-- Classes to run -->
     <classes>

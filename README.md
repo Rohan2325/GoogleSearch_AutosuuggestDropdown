@@ -16,5 +16,6 @@ Prerequisites :
 5) **Maven**                       : If you are using Maven, it will handle dependencies automatically.
 
 **Test Details** : 
+
 Test Method : The testGoogleSearch() method automates typing "automation" into Google’s search box.
 It then interacts with the autosuggest dropdown, printing the number of suggestions and selecting the one that matches "automation."

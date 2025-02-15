@@ -27,32 +27,32 @@ public class GoogleSearch_AutosuuggestDropdown {
       	      WebDriverManager.chromedriver().setup();
       	      driver = new ChromeDriver();
       	 }
-      	  else if (Browser.equalsIgnoreCase("firefox")) {
+      	    else if (Browser.equalsIgnoreCase("firefox")) {
       	      WebDriverManager.firefoxdriver().setup();
       	      driver = new FirefoxDriver();
       	 }
-      	  else { 
-      		  throw new IllegalArgumentException("Browser not supported: " + Browser);
+      	    else { 
+      	      throw new IllegalArgumentException("Browser not supported: " + Browser);
       	 }
-        	  driver.get("https://www.google.com/");
-        	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+              driver.get("https://www.google.com/");
+              driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     	 }
 
 	        @Test
 	        public void testGoogleSearch() {	    	
 	        driver.findElement(By.id("APjFqb")).sendKeys("automation");
-		    List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li[@role='presentation']"));
-            System.out.println(list.size());
-            for(int i=0;i<list.size();i++)
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li[@role='presentation']"));
+                System.out.println(list.size());
+                for(int i=0;i<list.size();i++)
          {
-            System.out.println(list.get(i).getText());
-            if(list.get(i).getText().equals("automation"))
+                System.out.println(list.get(i).getText());
+                if(list.get(i).getText().equals("automation"))
          {
         	list.get(i).click();
         	break;
-        }
-        }
-	    }
+         }
+         }
+         }
      @AfterClass
      public void teardown()
      {
